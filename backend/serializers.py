@@ -5,7 +5,7 @@ class UsuarioSerializer(serializers.ModelSerializer):
     class Meta:
         model = Usuario
         fields = ['id', 'nombre', 'email', 'password', 'rol']
-        extra_kwargs = {'password': {'write_only': True}} # Oculta la contraseña al listar usuarios por seguridad
+        extra_kwargs = {'password': {'write_only': True}}
 
 class ReservaSerializer(serializers.ModelSerializer):
     usuario_nombre = serializers.ReadOnlyField(source='usuario.nombre')

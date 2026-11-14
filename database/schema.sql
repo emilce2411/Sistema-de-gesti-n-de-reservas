@@ -4,7 +4,7 @@
 -- Autor: Emilce Agustina Torres
 -- =========================================================================
 
--- 1. Creación de la base de datos con el nombre simplificado
+-- 1. Creación de la base de datos
 CREATE DATABASE IF NOT EXISTS reserva 
 CHARACTER SET utf8mb4 
 COLLATE utf8mb4_unicode_ci;
@@ -13,7 +13,6 @@ COLLATE utf8mb4_unicode_ci;
 USE reserva;
 
 -- 2. Creación de la tabla USUARIO
--- Almacena la información de los clientes y administradores del sistema.
 CREATE TABLE usuario (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
@@ -23,7 +22,6 @@ CREATE TABLE usuario (
 ) ENGINE=InnoDB;
 
 -- 3. Creación de la tabla RESERVA
--- Almacena los turnos de la sala de coworking vinculados a un usuario específico.
 CREATE TABLE reserva (
     id INT AUTO_INCREMENT PRIMARY KEY,
     fecha DATE NOT NULL,
